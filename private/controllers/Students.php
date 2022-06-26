@@ -1,7 +1,7 @@
 <?php
 
 class Students extends Controller {
-    function index() {
+    function index($id = '') {
         
     }
 }
