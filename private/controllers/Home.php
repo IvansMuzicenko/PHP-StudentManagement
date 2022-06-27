@@ -2,6 +2,6 @@
 
 class Home extends Controller {
     function index() {
-        $this->view('home');
+        $this->view('home',["title" => 'Home']);
     }
 }

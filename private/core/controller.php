@@ -4,11 +4,15 @@ class Controller {
 
     public function view($view, $data = []) {
         extract($data);
+        require "../private/views/includes/header.view.php";
+
         if (file_exists("../private/views/" . $view . ".view.php")) {
             require "../private/views/" . $view . ".view.php";
         } else {
             require "../private/views/404.view.php";
         }
+        
+        require "../private/views/includes/footer.view.php";
     }
     
 }
