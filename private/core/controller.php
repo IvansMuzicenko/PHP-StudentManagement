@@ -5,6 +5,7 @@ class Controller {
     public function view($view, $data = []) {
         extract($data);
         require "../private/views/includes/header.view.php";
+        require "../private/views/includes/nav.view.php";
 
         if (file_exists("../private/views/" . $view . ".view.php")) {
             require "../private/views/" . $view . ".view.php";
