@@ -11,8 +11,7 @@ class Controller {
         } else {
             require "../private/views/404.view.php";
         }
-        
+
         require "../private/views/includes/footer.view.php";
     }
-    
 }
