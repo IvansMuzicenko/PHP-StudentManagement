@@ -10,7 +10,7 @@ class Database {
         return $con;
     }
 
-    public function run($query, $data = [], $data_type = 'object') {
+    public function query($query, $data = [], $data_type = 'object') {
         $con = $this->connect();
         $stm = $con->prepare($query);
 
@@ -28,8 +28,5 @@ class Database {
                 }
             }
         }
-    }
-
-    private function query() {
     }
 }
