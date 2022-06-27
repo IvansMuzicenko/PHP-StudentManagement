@@ -2,8 +2,8 @@
 
 class Database {
     private function connect() {
-        $db_params = "mysql:host=localhost;dbname=university_db";
-        if ($con = new PDO($db_params, 'root', '')) {
+        $db_params = DBDRIVER . ":host=" . DBHOST . ";dbname=" . DBNAME;
+        if (!$con = new PDO($db_params, DBUSER, DBPASS)) {
             die("Failed to connect to database");
         }
 
