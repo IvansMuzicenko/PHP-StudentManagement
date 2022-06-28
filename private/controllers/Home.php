@@ -5,6 +5,7 @@ class Home extends Controller {
         $user = new User();
         $data = $user->findAll();
 
+
         $this->view('home', ["title" => 'Home', "rows" => $data]);
     }
 }
