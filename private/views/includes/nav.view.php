@@ -13,24 +13,26 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
+        <ul class="navbar-nav row">
+            <li class="nav-item active col">
                 <a class="nav-link" href="<?= ROOT ?>">DASHBOARD</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item col">
                 <a class="nav-link" href="<?= ROOT ?>/users">USERS</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item col">
                 <a class="nav-link" href="<?= ROOT ?>/classes">CLASSES</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item col">
                 <a class="nav-link" href="<?= ROOT ?>/tests">TESTS</a>
             </li>
+        </ul>
+        <ul class="navbar-nav ms-auto me-2">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     USER
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="<?= ROOT ?>/profile">Profile</a>
                     <a class="dropdown-item" href="<?= ROOT ?>">Dashboard</a>
                     <div class="dropdown-divider"></div>
