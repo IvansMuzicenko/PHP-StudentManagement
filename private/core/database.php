@@ -15,7 +15,7 @@ class Database {
         $stm = $con->prepare($query);
 
         if ($stm) {
-            $check = $stm->execute();
+            $check = $stm->execute($data);
             if ($check) {
                 if ($data_type == 'object') {
                     $data = $stm->fetchAll(PDO::FETCH_OBJ);
