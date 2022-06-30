@@ -36,6 +36,8 @@ class User extends Model {
             $this->errors['email'] = "Please provide a email";
         } else if (!filter_var($DATA['email'], FILTER_VALIDATE_EMAIL)) {
             $this->errors['email'] = "Email is not valid";
+        } else if ($this->where('email', $DATA['email'])) {
+            $this->errors['email'] = "Email already taken";
         }
 
         if (empty($DATA['gender'])) {
