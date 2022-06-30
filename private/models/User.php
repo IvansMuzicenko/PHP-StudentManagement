@@ -33,6 +33,8 @@ class User extends Model {
 
         if (empty($DATA['password']) || empty($DATA['password2'])) {
             $this->errors['password'] = "Passwords must not be empty";
+        } else if (strlen($DATA['password']) < 8 || strlen($DATA['password2']) < 8) {
+            $this->errors['password'] = "Password must be at least 8 characters long";
         } else if ($DATA['password'] != $DATA['password2']) {
             $this->errors['password'] = "Passwords do not match";
         }
