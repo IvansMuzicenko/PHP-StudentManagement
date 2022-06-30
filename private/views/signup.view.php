@@ -4,6 +4,17 @@
             <h2 class="text-center">My University</h2>
             <img src="<?= ROOT; ?>/assets/logo.png" class="rounded-circle w-50 d-block mx-auto border border-dark">
             <h3>Add user</h3>
+
+            <?php if (count($errors) > 0) : ?>
+                <div class="alert alert-warning alert-dismissible fade show p-1" role="alert">
+                    <strong>Error!</strong>
+                    <?php foreach ($errors as $error) {
+                        echo "<br>" . $error;
+                    }; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php endif; ?>
+
             <input type="text" value="<?= get_var('firstname'); ?>" class="my-2 form-control" name="firstname" placeholder="Firstname" autofocus>
             <input type="text" value="<?= get_var('lastname'); ?>" class="my-2 form-control" name="lastname" placeholder="Lastname">
             <input type="email" value="<?= get_var('email'); ?>" class="my-2 form-control" name="email" placeholder="Email">
