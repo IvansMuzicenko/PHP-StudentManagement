@@ -63,7 +63,7 @@ class User extends Model {
     }
 
     public function make_user_id($data) {
-        $data['user_id'] = $this->random_string(60);
+        $data['user_id'] = random_string(60);
         return $data;
     }
     public function make_school_id($data) {
@@ -75,17 +75,5 @@ class User extends Model {
     public function hash_password($data) {
         $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
         return $data;
-    }
-
-    private function random_string($length) {
-        $symbols = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-        $result = '';
-
-        for ($i = 0; $i < $length; $i++) {
-            $random = rand(0, 61);
-            $result .= $symbols[$random];
-        }
-        return $result;
     }
 }
