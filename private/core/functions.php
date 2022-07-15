@@ -17,3 +17,15 @@ function get_select($key, $value) {
 function esc($var) {
     return htmlspecialchars($var);
 }
+
+function random_string($length) {
+    $symbols = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    $result = '';
+
+    for ($i = 0; $i < $length; $i++) {
+        $random = rand(0, 61);
+        $result .= $symbols[$random];
+    }
+    return $result;
+}
